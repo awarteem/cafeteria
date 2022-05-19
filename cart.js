@@ -13,20 +13,20 @@ const firebaseConfig = {
 let contactInfo = firebase.database().ref("datas");
 
 // Listen for a submit
-document.querySelector(".contact-form").addEventListener("submit", submitForm);
+document.getElementById(".contact-form").addEventListener("submit", submitForm);
 
 function submitForm(e) {
   e.preventDefault();
 
   //   Get input Values
-  let name = document.querySelector(".name").value;
-  let email = document.querySelector(".email").value;
-  let address = document.querySelector(".address").value;
+  let name = document.getElementById(".name").value;
+  let email = document.getElementById(".email").value;
+  let address = document.getElementById(".address").value;
   console.log(name, email, address);
 
   saveContactInfo(name, email, address);
 
-  document.querySelector(".contact-form").reset();
+  document.getElementById(".contact-form").reset();
 }
 
 // Save infos to Firebase
