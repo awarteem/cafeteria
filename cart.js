@@ -1,4 +1,4 @@
-const firebaseConfig = {
+var firebaseConfig = {
     apiKey: "AIzaSyCvJjoGTwV6Yg9VDmukX3WsDRoYQ8MGA6k",
     authDomain: "cafeteria-c90fb.firebaseapp.com",
     projectId: "cafeteria-c90fb",
@@ -13,20 +13,20 @@ const firebaseConfig = {
 let contactInfo = firebase.database().ref("datas");
 
 // Listen for a submit
-document.getElementById(".contact-form").addEventListener("submit", submitForm);
+document.querySelector(".contact-form").addEventListener("submit", submitForm);
 
 function submitForm(e) {
   e.preventDefault();
 
   //   Get input Values
-  let name = document.getElementById(".name").value;
-  let email = document.getElementById(".email").value;
-  let address = document.getElementById(".address").value;
+  let name = document.querySelector(".name").value;
+  let email = document.querySelector(".email").value;
+  let address = document.querySelector(".address").value;
   console.log(name, email, address);
 
   saveContactInfo(name, email, address);
 
-  document.getElementById(".contact-form").reset();
+  document.querySelector(".contact-form").reset();
 }
 
 // Save infos to Firebase
