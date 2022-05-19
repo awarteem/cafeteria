@@ -1,4 +1,4 @@
-var firebaseConfig = {
+const firebaseConfig = {
     apiKey: "AIzaSyCvJjoGTwV6Yg9VDmukX3WsDRoYQ8MGA6k",
     authDomain: "cafeteria-c90fb.firebaseapp.com",
     projectId: "cafeteria-c90fb",
